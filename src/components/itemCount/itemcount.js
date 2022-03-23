@@ -27,7 +27,7 @@ function ItemCount(){
                 <Button onClick={addClick} className='buttonMas' variant="contained" color="primary">+</Button>
 
             </div>
-            <OnAdd></OnAdd>
+            <OnAdd count={count}></OnAdd>
 
         </div>
     )

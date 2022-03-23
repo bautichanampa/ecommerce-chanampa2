@@ -1,12 +1,13 @@
 import Button from '@mui/material/Button';
-import count from './itemcount';
 
 
 
-function OnAdd(){
+
+function OnAdd( {count}){
+    
      const addToCart = () =>{
-         {alert(count)};
-         console.log(count.value)
+         alert('agregaste ',count, 'tratamientos al carrito');
+         console.log('agregaste ',count, 'tratamientos al carrito');
      }
     return(
     <Button onClick={addToCart} className='buttonAddToCart' variant="contained" color="primary"> Agregar al carrito</Button>
