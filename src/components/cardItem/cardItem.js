@@ -1,5 +1,6 @@
 
-import Button from '@mui/material/Button';
+
+import ItemCount from '../itemCount/itemcount';
 import './cardItem.css';
 
 
@@ -9,7 +10,8 @@ function CardItem({tittle, image, price}){
             <h1>{tittle}</h1>
             <img src={image} />
             <p>${price}</p>
-            <Button className='buttonAddToCart' variant="contained" color="primary"> Agregar al carrito</Button>
+            
+            <ItemCount />
 
         </div>
     )
