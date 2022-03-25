@@ -1,4 +1,6 @@
+import './onAdd.css';
 import Button from '@mui/material/Button';
+
 
 
 
@@ -10,7 +12,8 @@ function OnAdd( {count}){
          console.log('agregaste ',count, 'tratamientos al carrito');
      }
     return(
-    <Button onClick={addToCart} className='buttonAddToCart' variant="contained" color="primary"> Agregar al carrito</Button>
+    
+    <Button onClick={addToCart} className='buttonAddToCart' variant="contained" color="primary" size="small" > Agregar al carrito</Button>
     )
 }
 

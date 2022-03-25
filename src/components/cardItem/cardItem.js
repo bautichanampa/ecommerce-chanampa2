@@ -4,12 +4,16 @@ import ItemCount from '../itemCount/itemcount';
 import './cardItem.css';
 
 
-function CardItem({tittle, image, price}){
+function CardItem({infItems}){
+    const {tittle, image, price}= infItems
     return(
         <div className='containerProduct'>
-            <h1>{tittle}</h1>
+
             <img src={image} />
-            <p>${price}</p>
+            <div className='containerPrice'>
+                <h1>{tittle}</h1>
+                <p>${price}</p>
+            </div>
             
             <ItemCount />
 
