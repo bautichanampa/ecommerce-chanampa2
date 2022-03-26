@@ -25,7 +25,7 @@ function ItemCount(){
             <div className="containerItemCount">
                 <Button onClick={removeClick} className='button' variant="contained" color="primary">-</Button>
                 <p className="cantidad">{count}</p>
-                <Button onClick={addClick} className='button' variant="contained" color="primary" >+</Button>
+                <Button onClick={addClick} className='button' variant="contained" color="primary"  >+</Button>
 
             </div>
             <OnAdd count={count}></OnAdd>

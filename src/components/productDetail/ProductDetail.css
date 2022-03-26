@@ -1,0 +1,40 @@
+.containerProductDetail{
+    box-shadow: 0px 10px #f1efef;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 150px;
+    background-color: rgb(255, 242, 251);
+    align-content: center;
+    
+}
+.containerPriceDetail{
+    
+    
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 2%;
+    background-color: rgb(255, 242, 251);
+    
+}
+.h1{
+    font-size: 50px;
+    color: rgb(102, 170, 233);
+    
+}
+.imgProductDetail{
+    width: 40%;
+    height: 50%;
+    
+    
+}
+.description{
+    width: 40%;
+    
+}

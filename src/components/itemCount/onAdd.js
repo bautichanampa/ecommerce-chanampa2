@@ -13,7 +13,7 @@ function OnAdd( {count}){
      }
     return(
     
-    <Button onClick={addToCart} className='buttonAddToCart' variant="contained" color="primary" size="small" > Agregar al carrito</Button>
+    <Button onClick={addToCart} className='buttonAddToCart' variant="contained" color="primary"  > Agregar al carrito</Button>
     )
 }
 
