@@ -15,7 +15,7 @@ function CardItem({infItems}){
                 <p>${price}</p>
             </div>
             
-            <ItemCount />
+            <ItemCount className='itemCount' />
 
         </div>
     )

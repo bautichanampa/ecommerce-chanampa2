@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    background-color: rgb(255, 242, 251);
+    background-color: black;
   }
   .navbar{
     display: flex;
@@ -11,9 +11,10 @@
    
     
   }
-  .buttonNav{
-    background-color: rgb(102, 170, 233);
-  }
+  a {
+    text-decoration: none;
+    color: white;
+}
   
   ul {
     

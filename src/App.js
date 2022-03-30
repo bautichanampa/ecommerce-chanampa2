@@ -1,23 +1,36 @@
 
 import './App.css';
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/navBar/navBar';
-import ListProducts from './components/listProducts/listProducts';
+
+import HomePage from './pages/HomePage'
+import ContactPage from './pages/ContactPage'
+import SobreNosotrosPage from './pages/SobreNosotrosPage'
+import NotFound from './pages/NotFound'
+import ProductDetailPage from './pages/ProductDetailPage';
+import CategoryPage from './pages/CategoryPage';
 
 
 function App() {
   return (
     <>
-    <header>
-      <div className="App">
+    
+    <div className="App">
+      <BrowserRouter>
         <NavBar />
-      </div>
-    </header>
-    <body>
-        <div>
-          <ListProducts/>
-        </div>
-    </body>
+        <Routes>
+          <Route path='/contacto' element={<ContactPage/>}/>
+          <Route path='/sobreNosotros' element={<SobreNosotrosPage/>}/>
+          <Route path='/' element={<HomePage/>}/>
+          <Route path='/productos/:id' element={<ProductDetailPage/>}/>
+          <Route path='/category/:category' element={<CategoryPage/>}/>
+          
+          <Route path='*' element={<NotFound/>}/>
+          
+
+        </Routes>
+      </BrowserRouter>
+    </div>
     
     </>
     
