@@ -8,18 +8,31 @@ import './ProductDetailPage.css'
 
 function CategoryPage (){
     const { category } = useParams()
-    const [product, setProduct] = useState({})
+    const [products, setProducts] = useState({})
+    
+
+   
+
+    const getProducts = () => {
+        return new Promise ((resolve, reject) =>{
+            
+            return resolve(mockProducts)
+        })
+    }
+    useEffect (() => {
+        getProducts().then((productos) =>{
+            setProducts (productos)
+        })
+    },[])
 
     useEffect (()=>{
         productFiltrer(mockProducts, category)
     },[])
-
-    
     const productFiltrer = () =>{
-        return mockProducts.map((product)=>{
+        return products.map((product)=>{
             if (product.category === category)
             {
-                return setProduct(product)
+                return setProducts(product)
 
                     
                     
@@ -33,7 +46,7 @@ function CategoryPage (){
         <div className='container'>
             
             
-            {product.map((product) => {
+            {products.map((product) => {
                 
 
                 return (
