@@ -1,11 +1,11 @@
 
-
-import ItemCount from '../itemCount/itemcount';
+import { Link } from 'react-router-dom';
+import Button from '@mui/material/Button';
 import './cardItem.css';
 
 
 function CardItem({infItems}){
-    const {tittle, image, price}= infItems
+    const {tittle, image, price, id}= infItems
     return(
         <div className='containerProduct'>
 
@@ -15,7 +15,7 @@ function CardItem({infItems}){
                 <p>${price}</p>
             </div>
             
-            <ItemCount className='itemCount' />
+            <Button className='itemCount' variant="contained" color="primary"><Link to={`/productos/${id}`}>Seleccionar</Link></Button> 
 
         </div>
     )

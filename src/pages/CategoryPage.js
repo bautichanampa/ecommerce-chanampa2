@@ -12,47 +12,34 @@ function CategoryPage (){
     
 
    
-
-    const getProducts = () => {
-        return new Promise ((resolve, reject) =>{
-            
-            return resolve(mockProducts)
-        })
-    }
     useEffect (() => {
-        getProducts().then((productos) =>{
-            setProducts (productos)
-        })
-    },[])
-
-    useEffect (()=>{
-        productFiltrer(mockProducts, category)
-    },[])
-    const productFiltrer = () =>{
-        return products.map((product)=>{
-            if (product.category === category)
-            {
-                return setProducts(product)
-
-                    
-                    
-                    
-            }
+    const getProducts = () => {
+        return new Promise ((resolve) =>{
+            
+                
+             const myProducts = category
+              ? mockProducts.filter((item) => item.category === category)
+              : mockProducts;
+        
+            resolve(myProducts);
+             
         })
     }
-
     
+    getProducts.then((productos) =>{
+        setProducts (productos);
+        console.log(products);
+    })
     return (
         <div className='container'>
             
-            
             {products.map((product) => {
-                
+                const {id} = product
 
                 return (
                     
                     
-                    <CardItem className="product" infItems={product} />
+                    <CardItem className="product" infItems={product} key={id} />
                     
                     
                     
@@ -64,6 +51,14 @@ function CategoryPage (){
 
         </div>
     )
+    
+    },[])
+
+    
+
+
+    
+    
 
 }
 
