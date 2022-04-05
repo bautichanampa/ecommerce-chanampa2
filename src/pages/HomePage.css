@@ -1,0 +1,29 @@
+.containerTratamientos{
+    display: flex;
+    justify-content: left;
+    color: rgb(102, 170, 233);
+    margin-left: 140px;
+}
+.tituloTratamiento{
+    font-size: 40px;
+}
+.containerCategorySelector{
+    display: flex;
+    margin-top: 40px;
+    
+    align-content: center;
+    /* width: 50%; */
+    justify-content: space-between;
+    color: rgb(102, 170, 233);
+    margin-right: 140px;
+    margin-left: 140px;
+    
+}
+
+.aCeleste {
+    text-decoration: none;
+    color: rgb(102, 170, 233);;
+    border: 2px solid;
+    padding-left: 15px;
+    padding-right: 15px;
+}

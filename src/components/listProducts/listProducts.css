@@ -1,5 +1,6 @@
 .container{
-    margin: 140px;
+    margin-left: 140px;
+    margin-right: 140px;
     display: flex;
     align-content: center;
     flex-wrap: wrap;
@@ -10,15 +11,7 @@
     
     
 }
-.containetItemDetail{
-    
-    display: flex;
-    align-content: center;
-    place-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    
-    
-}
 
+.product{
+    width: 25%;
+}

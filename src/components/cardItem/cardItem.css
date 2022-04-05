@@ -1,12 +1,12 @@
 .containerProduct{
     box-shadow: 0px 10px #f1efef;
-    width: 18%;
+    width: 24%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
-    
+    margin-top: 5%;
     background-color: rgb(255, 242, 251);
     
 }
@@ -23,8 +23,8 @@
     background-color: rgb(255, 242, 251);
     
 }
-h1{
-    font-size: 16px;
+.tituloProducto{
+    font-size: 26px;
     color: rgb(102, 170, 233);
     
 }

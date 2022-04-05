@@ -14,9 +14,9 @@ function NavBar(){
            </div>
            <ul className="navbar">
                
-               <li><Button className="buttonNav" variant="contained" color="primary"><Link to={'/'}>Home</Link></Button></li>
-               <li><Button className="buttonNav" variant="contained" color="primary"><Link to={'/sobreNosotros'}>Sobre nosotros</Link></Button></li>
-               <li><Button className="buttonNav" variant="contained" color="primary"><Link to={'/contacto'}>Contacto</Link></Button></li>
+               <li><Button className="buttonNav" variant="contained" color="primary"><Link className="aBlanco" to={'/'}>Home</Link></Button></li>
+               <li><Button className="buttonNav" variant="contained" color="primary"><Link className="aBlanco" to={'/sobreNosotros'}>Sobre nosotros</Link></Button></li>
+               <li><Button className="buttonNav" variant="contained" color="primary"><Link className="aBlanco" to={'/contacto'}>Contacto</Link></Button></li>
                <li><CartWidget /></li>
                
            </ul>

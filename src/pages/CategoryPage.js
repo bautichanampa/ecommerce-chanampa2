@@ -8,38 +8,35 @@ import './ProductDetailPage.css'
 
 function CategoryPage (){
     const { category } = useParams()
-    const [products, setProducts] = useState({})
+    const [products, setProducts] = useState([])
     
-
+    const getProducts =  new Promise ((res) =>{
+            res(mockProducts);
+        })
    
     useEffect (() => {
-    const getProducts = () => {
-        return new Promise ((resolve) =>{
-            
-                
-             const myProducts = category
-              ? mockProducts.filter((item) => item.category === category)
-              : mockProducts;
-        
-            resolve(myProducts);
-             
+        getProducts.then((products) =>{
+            if (category){
+                const type = products.filter((e) => e.category === category)
+                setProducts(type)
+            }else {
+                setProducts(products)
+            }
         })
-    }
+             .catch(err => console.log(err))
+        },[category])
     
-    getProducts.then((productos) =>{
-        setProducts (productos);
-        console.log(products);
-    })
+    
+   
     return (
         <div className='container'>
-            
             {products.map((product) => {
-                const {id} = product
+                
 
                 return (
                     
                     
-                    <CardItem className="product" infItems={product} key={id} />
+                    <CardItem className="product" products={product}  />
                     
                     
                     
@@ -47,18 +44,8 @@ function CategoryPage (){
                     
                 )
             })}
-            
-
         </div>
     )
-    
-    },[])
-
-    
-
-
-    
-    
 
 }
 

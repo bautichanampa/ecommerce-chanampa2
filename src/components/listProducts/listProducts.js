@@ -31,7 +31,7 @@ function ListProducts(){
                 return (
                     
                     
-                    <CardItem className="product" infItems={product} key={id} />
+                    <CardItem className="product" products={product} key={id} />
                     
                     
                     
