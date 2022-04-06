@@ -9,13 +9,15 @@ import SobreNosotrosPage from './pages/SobreNosotrosPage'
 import NotFound from './pages/NotFound'
 import ProductDetailPage from './pages/ProductDetailPage';
 import CategoryPage from './pages/CategoryPage';
-
+import {CartProvider} from './context/cartContext' ;
+import Footer from './components/footer/footer';
 
 function App() {
   return (
     <>
     
     <div className="App">
+      <CartProvider>
       <BrowserRouter>
         <NavBar />
         <Routes>
@@ -29,12 +31,15 @@ function App() {
           
 
         </Routes>
+        <Footer/>
       </BrowserRouter>
+      </CartProvider>
     </div>
     
     </>
     
   );
 }
+
 
 export default App;

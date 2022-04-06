@@ -5,12 +5,13 @@ import Button from '@mui/material/Button';
 
 
 
-function ItemCount(){
+function ItemCount({data}){
     const [count, setCount ] = useState(1)
     const addClick = () => {
-    
+        
         setCount (count + 1);
         if (count<=1) return setCount(count + 1) ;
+        console.log(count)
     }
     if (count<=0) return setCount(1) ;
     const removeClick = () => {
@@ -28,7 +29,7 @@ function ItemCount(){
                 <Button onClick={addClick} className='button' variant="contained" color="primary"  >+</Button>
 
             </div>
-            <OnAdd count={count}></OnAdd>
+            <OnAdd data={[data,count]}></OnAdd>
 
         </div>
     )

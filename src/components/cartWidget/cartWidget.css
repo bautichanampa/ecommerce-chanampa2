@@ -1,3 +1,46 @@
 .cartImage{
-    width: 30%;
+    width: 100%;
+}
+.cart-button{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    
+}
+.countCart{
+    color: rgb(102, 170, 233);
+    font-size: 19px;
+    margin-top: -5px ;
+}
+.containerImageProductCart{
+    width: 15%;
+    margin-right: 10%;
+}
+.item-cart-modal__info{
+    display: flex;
+    align-items: center;
+    color: rgb(102, 170, 233);
+}
+.cartProductPrice{
+    margin-left: 5%;
+    
+}
+.itemCartModal{
+    align-content: center;
+    justify-content: center;
+    display: flex;
+}
+.btnCustom{
+    text-decoration: none;
+    color: white;
+}
+.cart-modal{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+.footer-modal-cart{
+    display: flex;
+    justify-content: center;
 }

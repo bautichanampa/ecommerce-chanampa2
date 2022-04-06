@@ -30,12 +30,12 @@ function ProductDetailPage (){
     
     return (
         <div className='containerProductDetail'>
-        <img className='imgProductDetail' src={product.image} />
+            <img className='imgProductDetail' src={product.image} />
             <div className='containerPriceDetail'>
                 <h1 className='h1'>{product.tittle}</h1>
                 <p className='description'>{product.description}</p>
                 <p>${product.price}</p>
-                <ItemCount />
+                <ItemCount data={product} />
             </div>
         </div>
     )

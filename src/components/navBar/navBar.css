@@ -3,6 +3,7 @@
     justify-content: space-between;
     width: 100%;
     background-color: black;
+    box-shadow: 1px 5px 15px #81818129;
   }
   .navbar{
     display: flex;
@@ -28,4 +29,7 @@
   .logo{
     width: 100px;
     margin-left: 10px;
+  }
+  .cartContainer{
+    width: 10px;
   }

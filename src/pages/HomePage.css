@@ -2,28 +2,45 @@
     display: flex;
     justify-content: left;
     color: rgb(102, 170, 233);
-    margin-left: 140px;
+    
 }
 .tituloTratamiento{
-    font-size: 40px;
+    font-size: 25px;
 }
 .containerCategorySelector{
     display: flex;
-    margin-top: 40px;
-    
+    margin-top: 10px;
+    flex-direction: column;
     align-content: center;
     /* width: 50%; */
-    justify-content: space-between;
+    justify-content: left;
     color: rgb(102, 170, 233);
-    margin-right: 140px;
-    margin-left: 140px;
+    
     
 }
 
 .aCeleste {
     text-decoration: none;
-    color: rgb(102, 170, 233);;
-    border: 2px solid;
+    color: rgb(102, 170, 233);
     padding-left: 15px;
     padding-right: 15px;
+    font-size: 20px;
+}
+.containerHomer{
+    display: flex;
+
+}
+.containerCategorys{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 8px;
+    
+    
+}
+.borde{
+    background-color: white;
+    border: 2px solid ;
+    border-color: rgb(102, 170, 233) ;
 }

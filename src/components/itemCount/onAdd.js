@@ -1,15 +1,19 @@
 import './onAdd.css';
+import { useContext, useState, useEffect } from 'react';
 import Button from '@mui/material/Button';
+import CartContext from '../../context/cartContext';
 
 
 
 
 
-function OnAdd( {count}){
-    
+function OnAdd({data}){
+    const count = data[1];
+    const dataProduct = data[0];
+    const {cartProducts, addProductToCart} = useContext(CartContext)
      const addToCart = () =>{
-         alert('agregaste ',count, 'tratamientos al carrito');
-         console.log('agregaste ',count, 'tratamientos al carrito');
+         console.log(dataProduct*count)
+        addProductToCart(dataProduct)
      }
     return(
     
