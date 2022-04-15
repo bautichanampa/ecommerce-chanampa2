@@ -30,17 +30,3 @@
     display: flex;
 
 }
-.containerCategorys{
-    width: 15%;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    padding: 8px;
-    
-    
-}
-.borde{
-    background-color: white;
-    border: 2px solid ;
-    border-color: rgb(102, 170, 233) ;
-}

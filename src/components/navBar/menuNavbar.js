@@ -16,14 +16,14 @@ export default function BasicMenu() {
 
   return (
     <div>
-      <Button className="buttonNav" variant="contained" color="primary"
+      <Button className="buttonNav"
         id="basic-button"
         aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        Tratamientos
+        <a className='aBlanco2'>Tratamientos</a>
       </Button>
       <Menu
         id="basic-menu"

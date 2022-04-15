@@ -9,6 +9,7 @@ import SobreNosotrosPage from './pages/SobreNosotrosPage'
 import NotFound from './pages/NotFound'
 import ProductDetailPage from './pages/ProductDetailPage';
 import CategoryPage from './pages/CategoryPage';
+import CartPage from './pages/cartPage'
 import {CartProvider} from './context/cartContext' ;
 import Footer from './components/footer/footer';
 
@@ -26,7 +27,7 @@ function App() {
           <Route path='/' element={<HomePage/>}/>
           <Route path='/productos/:id' element={<ProductDetailPage/>}/>
           <Route path='/category/:category' element={<CategoryPage/>}/>
-          
+          <Route path='/finalizarCompra' element={<CartPage/>}/>
           <Route path='*' element={<NotFound/>}/>
           
 

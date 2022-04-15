@@ -7,14 +7,34 @@
   }
   .navbar{
     display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
     place-items: right;
-    margin-right:-120px ;
+    margin-right: -65px;
+
+    
    
     
+  }
+  .containerMenu{
+    display: flex;
+    justify-content: right;
   }
   .aBlanco {
     text-decoration: none;
     color: white;
+    font-weight: bold;
+}
+.aBlanco2 {
+  text-decoration: none;
+  color: rgb(102, 170, 233);
+  font-size: 17px;
+  font-weight: bold;
+}
+.aBlanco2:hover{
+  color: rgb(149, 192, 233);
 }
   
   ul {
@@ -23,7 +43,11 @@
     
   }
   li{
-    margin: 5px;
+    margin-left: 5px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
   
   .logo{
@@ -32,4 +56,10 @@
   }
   .cartContainer{
     width: 10px;
+  }
+  .buttonNav{
+    color: rgb(102, 170, 233);;
+  }
+  .basic-menu{
+    background-color: black;
   }

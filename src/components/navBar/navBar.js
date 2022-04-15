@@ -14,15 +14,16 @@ function NavBar(){
            <div>
                <img className="logo" src={logo}/>
            </div>
+           <div className="containerMenu">
            <ul className="navbar">
                
-               <li><Button className="buttonNav" variant="contained" color="primary"><Link className="aBlanco" to={'/'}>Home</Link></Button></li>
+               <li><Button className="buttonNav"  ><Link className="aBlanco2" to={'/'}>Home</Link></Button></li>
                <li><BasicMenu ></BasicMenu></li>
-               <li><Button className="buttonNav" variant="contained" color="primary"><Link className="aBlanco" to={'/sobreNosotros'}>Sobre nosotros</Link></Button></li>
-               <li><Button className="buttonNav" variant="contained" color="primary"><Link className="aBlanco" to={'/contacto'}>Contacto</Link></Button></li>
-               <li ><CartWidget /></li>
-               
+               <li><Button className="buttonNav"  ><Link className="aBlanco2" to={'/sobreNosotros'}>Sobre nosotros</Link></Button></li>
+               <li><Button className="buttonNav"  ><Link className="aBlanco2" to={'/contacto'}>Contacto</Link></Button></li> 
            </ul>
+           <CartWidget />
+           </div>
            
        </header>
        

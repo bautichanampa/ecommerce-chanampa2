@@ -6,18 +6,26 @@ const CartContext = createContext();
 
 const CartProvider = ({children}) => {
     const [cartProducts, setCartProducts] = useState([])
+    const [totalPrice, setTotalPrice] = useState(0)
 
 
-const addProductToCart = (dataProduct) => {
+    const addProductToCart = (dataProduct) => {
     console.log("agregar al carrito", dataProduct)
     setCartProducts(cartProducts => [...cartProducts, dataProduct])
+    setTotalPrice(totalPrice + dataProduct.price)
     
-}
-const data = {
+    }
+    const deleteProduct = (dataProduct) => {
+        setCartProducts(cartProducts.filter( cartProduct => cartProduct.id !== dataProduct.id))
+        console.log('se borro',cartProducts)
+    }
+    const data = {
     cartProducts,
-    addProductToCart
-}
-
+    addProductToCart,
+    deleteProduct,
+    totalPrice
+    }  
+    
 
 return(
     <CartContext.Provider value={data}>

@@ -1,4 +1,5 @@
 import fotoCarrito from "./carrito.png";
+import fotoBorrarCarrito from './fotoBorrarCarrito.png';
 import './cartWidget.css';
 import { useState, useContext } from 'react'
 import Menu from '@mui/material/Menu';
@@ -9,7 +10,7 @@ import Button from '@mui/material/Button';
 import CartContext from '../../context/cartContext';
 
 const CartWidget = () => {
-    const { cartProducts } = useContext(CartContext)
+    const { cartProducts, deleteProduct, totalPrice } = useContext(CartContext)
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -73,24 +74,26 @@ const CartWidget = () => {
                     return(
                         <MenuItem  key={cartProducts.id}>
                             <div className='itemCartModal' >
-                            <div className='containerImageProductCart'>
-                                <img className="imageProductCart" src={`${cartProducts.image}`} /> 
-                            </div>
-                            <div className='item-cart-modal__info'>
-                                <p>{cartProducts.tittle}</p>
-                                <span className="cartProductPrice">$ {cartProducts.price}</span>
-                            </div>
-                            <div className='item-cart-modal__action'>
-                                <fotoCarrito />
-                            </div>
+                                <div className='containerImageProductCart'>
+                                    <img className="imageProductCart" src={`${cartProducts.image}`} /> 
+                                </div>
+                                <div className='item-cart-modal__info'>
+                                    <p>{cartProducts.tittle}</p>
+                                    <span className="cartProductPrice">$ {cartProducts.price}</span>
+                                </div>
+                                
+                                <Button className="borrarCarrito" onClick={deleteProduct}>X</Button>
+                                
                             </div>
                         </MenuItem>
                     )
                 })}
-                
+                <div className="precioTotalCarrito"> 
+                <p>Precio total: {totalPrice}</p>
+                </div>
                 <Divider />
                 <div className='footer-modal-cart'>
-                    <Button className="btnCustom" variant="contained" color="primary"><Link className="aBlanco" to="/cart">Iniciar la compra</Link></Button>
+                    <Button className="btnCustom" variant="contained" color="primary"><Link className="aBlanco" to="/finalizarCompra">Iniciar la compra</Link></Button>
                 </div>
             </Menu>
         </div>

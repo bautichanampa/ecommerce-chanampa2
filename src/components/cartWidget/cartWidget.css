@@ -1,10 +1,13 @@
 .cartImage{
-    width: 100%;
+    
+    width: 40%;
 }
 .cart-button{
     width: 25%;
     display: flex;
     align-items: center;
+    justify-content: right;
+    margin-right: 10px;
     
 }
 .countCart{
@@ -41,6 +44,15 @@
     justify-content: center;
 }
 .footer-modal-cart{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.borrarCarrito{
+    
+    height: 30%;
+}
+.precioTotalCarrito{
     display: flex;
     justify-content: center;
 }
