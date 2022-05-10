@@ -1,3 +1,4 @@
+
 const mockProducts = [
     {
         id :'vs1x1',
