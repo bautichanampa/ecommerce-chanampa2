@@ -50,6 +50,7 @@ const CartPage = () => {
             buyer: formData}
         )
         pushOrder()
+        setOpenModal(false)
         
     }
     
